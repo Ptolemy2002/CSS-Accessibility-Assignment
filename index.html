@@ -5,6 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Web Accessibility</title>
+	<link rel="icon" type="image/x-icon" href="assets/accessible-icon.png">
+
 
 	<!-- Include Bootstrap -->
 		<!-- Styles -->
@@ -13,87 +15,355 @@
 			rel="stylesheet"
 			crossorigin="anonymous"
 		/>
-	
 		<!-- Icons -->
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
 			crossorigin="anonymous"
 		/>
-	
+		<link rel="stylesheet" href="css/accessibility.css">
 		<!-- Scripts -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
 			crossorigin="anonymous"
 		></script>
 
-	<!--
-		CSS Code to make the main content take up all space not taken by the header or footer
-	-->
 	<style>
-		html, body {
-			height: 100%;
-		}
 
-		body {
-			display: flex;
-			flex-direction: column;
-		}
-
-		main {
-			flex: 1 0 auto;
-		}
 	</style>
 
 	<!-- Utility for popover and tooltips -->
 	<script src="scripts/popoverTooltip.js" defer></script>
 </head>
+
+
 <body>
+
+	<!-- Header -->
+
 	<header class="sticky-top bg-light p-3">
 		<h1>Web Accessibility</h1>
 	</header>
 
+	<!-- Main container -->
+
 	<main class="container">
-		<section role="region" aria-label="The 4 Tenets of Web Accessibility">
-			<h2>The 4 Tenets of Web Accessibility</h2>
-			<ul>
-				<li role="listitem">Perceivable</li>
-				<li role="listitem">Operable</li>
-				<li role="listitem">Understandable</li>
-				<li role="listitem">Robust</li>
-			</ul>
-		</section>
 
-		<section role="region" aria-label="Overview of WCAG-EM">
-			<h2>Overview of WCAG-EM</h2>
-			<p>
-				The Web Content Accessibility Guidelines Evaluation Methodology (WCAG-EM) is a tool for evaluating
-				the accessibility of web content. It provides a framework for evaluating the conformance of web content
-				to the WCAG guidelines.
-			</p>
-		</section>
 
-		<section role="region" aria-label="The Importance of Using Semantic Tags">
-			<h2>The Importance of Using Semantic Tags</h2>
-			<p>
-				Semantic tags are HTML tags that provide meaning to the content they enclose.
-				Using semantic tags can improve the accessibility of a web page by making it easier for screen
-				readers and other assistive technologies to interpret the content.
-			</p>
-		</section>
+		<div class="row">
 
-		<section role="region" aria-label="Using ARIA in Web Pages">
-			<h2>Using ARIA in Web Pages</h2>
-			<p>
-				Accessible Rich Internet Applications (ARIA) is a set of attributes that can be added to HTML tags to
-				improve the accessibility of dynamic content. ARIA can be used to provide additional information to assistive
-				technologies, such as screen readers.
-			</p>
-		</section>
+			<div class="btn-group btn-group-justified" aria-label="button group of modals">
+				<a href="#" class="btn btn-primary" aria-label="Overview of WCAG-EM" data-bs-toggle="modal" data-bs-target="#wcagEmOverview">WCAG-EM Overview</a>
+	
+							<!-- Modal forWCAG-EM Overview -->
+							<div class="modal fade"
+							   id="wcagEmOverview"
+							   tabindex="-1"
+							   aria-labelledby="wcagEmOverview"
+							   aria-hidden="true">
+							   <div class="modal-dialog">
+		   
+								   <div class="modal-content">
+		   
+									   <div class="modal-header">
+		   
+										   <h5 
+											   class="modal-title"
+											   id="wcagEmOverview">
+											   Overview of WCAG-EM
+										   </h5>
+										   <button type="button"
+											   class="btn-close"
+											   data-bs-dismiss="modal"
+											   aria-label="Close">
+										   </button>
+		   
+									   </div>
+		   
+									   <div class="modal-body">
+		   
+										   <p>The Web Content Accessibility Guidelines Evaluation Methodology (WCAG-EM) is a tool for evaluating the accessibility of web 
+											content. It provides a framework for evaluating the conformance of web content to the WCAG guidelines.</p>
+		   
+										</div>
+		   
+									</div>
+		   
+								</div>
+							   </div>
+	
+				<a href="#" class="btn btn-primary" aria-label="Importance of Using Semantic Tags" data-bs-toggle="modal" data-bs-target="#semanticTags">Importance of Semantic Tags</a>
+	
+									<!-- Modal for Semantic Tags -->
+									<div class="modal fade"
+										id="semanticTags"
+										tabindex="-1"
+										aria-labelledby="semanticTags"
+										aria-hidden="true">
+										<div class="modal-dialog">
+					
+											<div class="modal-content">
+					
+												<div class="modal-header">
+					
+													<h5 
+														class="modal-title"
+														id="semanticTags">
+														The Importance of Using Semantic Tags
+													</h5>
+													<button type="button"
+														class="btn-close"
+														data-bs-dismiss="modal"
+														aria-label="Close">
+													</button>
+					
+												</div>
+					
+												<div class="modal-body">
+					
+													<p>Semantic tags are HTML tags that provide meaning to the content they enclose. Using semantic tags can improve
+													the accessibility of a web page by making it easier for screen readers and other assistive technologies to interpret the content.</p>
+					
+												</div>
+					
+											</div>
+					
+										</div>
+									</div>
+	
+				<a href="#" class="btn btn-primary" aria-label="Using ARIA in Web Pages" data-bs-toggle="modal" data-bs-target="#ariaWebPages">ARIA in Web Pages</a>
+	
+					<!-- Modal for Semantic Tags -->
+					<div class="modal fade"
+						id="ariaWebPages"
+						tabindex="-1"
+						aria-labelledby="ariaWebPages"
+						aria-hidden="true">
+						<div class="modal-dialog">
+	
+							<div class="modal-content">
+	
+								<div class="modal-header">
+	
+									<h5 
+										class="modal-title"
+										id="ariaWebPages">
+										Using ARIA in Web Pages
+									</h5>
+									<button type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close">
+									</button>
+								</div>
+	
+								<div class="modal-body">
+	
+									<p>Accessible Rich Internet Applications (ARIA) is a set of attributes that can be added to HTML tags to improve the accessibility of dynamic 
+									content. ARIA can be used to provide additional information to assistive technologies, such as screen readers.</p>
+	
+								</div>
+	
+							</div>
+	
+						</div>
+					</div>
+			
+			</div>
+			<!-- End of first row, modal buttons -->
+		</div>
+
+		<!-- Begin row of cards -->
+
+		<div class="row">
+
+
+			<div class="card" style="width: 18rem;">
+				<img src="assets/pour.png" class="card-img-top" alt="Jared Armstrong Profile Pic">
+				<div class="card-body">
+				  <h5 class="card-title">4 Tenets of Web Accessibility</h5>
+				
+	
+					<div class="accordion" id="accordionRecipes">
+	
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingOne">
+								<button
+									class="accordion-button collapsed"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#collapseOne"
+									aria-expanded="true"
+									aria-controls="collapseOne">
+									<strong>Perceivable</strong>
+								</button>
+							</h2>
+							<div
+								id="collapseOne"
+								class="accordion-collapse collapse"
+								aria-labelledby="Perceivable"
+								data-bs-parent="#POURaccordion">
+								<div class="accordion-body">
+									For information and interface components to be perceivable, 
+									they need to be presentable to a user in a way that they can 
+									discern regardless of which senses they do or do not have use of. 
+								</div>
+							</div>
+						
+						</div>
+					
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingTwo">
+								<button
+									class="accordion-button collapsed"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#collapseTwo"
+									aria-expanded="true"
+									aria-controls="collapseTwo">
+									<strong>Operable</strong>
+								</button>
+							</h2>
+							<div
+								id="collapseTwo"
+								class="accordion-collapse collapse"
+								aria-labelledby="Operable"
+								data-bs-parent="#POURaccordion">
+								<div class="accordion-body">
+									The user interface and navigation components of your website 
+									need to be able to be used by everyone, including people who 
+									do not navigate the web using a standard keyboard and mouse.
+								</div>
+							</div>
+						</div>
+	
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingThree">
+								<button
+									class="accordion-button collapsed"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#collapseThree"
+									aria-expanded="true"
+									aria-controls="collapseThree">
+									<strong>Understandable</strong> 
+								</button>
+							</h2>
+							<div
+								id="collapseThree"
+								class="accordion-collapse collapse"
+								aria-labelledby="Understandable"
+								data-bs-parent="#POURaccordion">
+									<div class="accordion-body">
+										regardless of ability, people must be able to understand not 
+										only the information in your web content, but also how to navigate 
+										the website to find the information they want, and how to use any 
+										tools or features built into the website.
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingTwo">
+								<button
+									class="accordion-button collapsed"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#collapseFour"
+									aria-expanded="true"
+									aria-controls="collapseFour">
+									<strong>Robust</strong>
+								</button>
+							</h2>
+							<div
+								id="collapseTwo"
+								class="accordion-collapse collapse"
+								aria-labelledby="Robust"
+								data-bs-parent="#POURaccordion">
+								<div class="accordion-body">
+									Your website needs to be robust enough that it supports and can be accessed on a 
+									variety devices, including assistive technologies. This means that as technology 
+									and user agents evolve, the content must still remain accessible, and be able to be interpreted.
+								</div>
+							</div>
+						</div>
+	
+					</div>
+				</div>
+			</div>
+
+			<div class="card" style="width: 18rem;">
+				<img src="assets/aria.png" class="card-img-top" alt="Jared Armstrong Profile Pic">
+				<div class="card-body">
+
+				  	<h5 class="card-title">What is ARIA?</h5>
+
+						<ul class="list-group">
+						  	<li class="list-group-item">Accessible</li>
+						  	<li class="list-group-item">Rich</li>
+						  	<li class="list-group-item">Internet</li>
+						  	<li class="list-group-item">Applications</li>
+					 	</ul>
+
+					<button 
+						 class="btn btn-md btn-primary d-block m-4"
+						 data-bs-container="body"
+						 data-bs-toggle="popover"
+						 data-bs-placement="right"
+						 title="What are roles?"
+						 data-bs-content="roles add meaning (semantics) to generic elements like div, a ..., with the role attribute.
+						  For example, if you use the a tag to represent a button, then according to ARIA, you should use,
+							<a href='...' role='button'.....>">
+						 <span> <i class="bi bi-universal-access-circle"></i></span>
+						 <span>ARIA Roles</span>
+					</button>
+
+					<button 
+					 	class="btn btn-md btn-primary d-block m-4"
+					 	data-bs-container="body"
+					 	data-bs-toggle="popover"
+					 	data-bs-placement="right"
+					 	title="What are attributes?"
+					 	data-bs-content="These work with roles, to extend even more support for assistive technology 
+						by adding the impact of a particular control. For example, labels should always be used with 
+						an input field, and ideally the label For attribute should be set to the field id. Suppose an 
+						input field does not have a label, maybe because it has been preceded by a paragraph, describing 
+						the intent of the form field. 
+						
+						<input type='text' id='name' name='name' required aria-label='user initials for agreement'
+			 
+						   minlength='4' maxlength='8' size='10'/>">
+					 	<span> <i class="bi bi-award-fill"></i></span>
+					 	<span>ARIA Attributes</span>
+				 	</button>
+
+					 <button 
+					 class="btn btn-md btn-primary d-block m-4"
+					 data-bs-container="body"
+					 data-bs-toggle="popover"
+					 data-bs-placement="right"
+					 title="Golen Rule of ARIA"
+					 data-bs-content="If you can use a native HTML element or attribute with the semantics and behavior you 
+					 require already built in, instead of re-purposing an element and adding an ARIA role, 
+					 state or property to make it accessible, then do so.">
+					 <span> <i class="bi bi-trophy-fill"></i></span>
+					 <span>ARIA Golden Rule</span>
+				 </button>
+
+				</div>
+			</div>
+
+
+			<!-- End of second row, accordions -->
+		</div>
+
 	</main>
 
 	<footer class="sticky-bottom bg-light p-3">
 		created by Ptolemy Henson, Felipe Baro-Tayahua, Seth Johnson, and Jared Armstrong 
 	</footer>
+
+
 </body>
+
 </html>

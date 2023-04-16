@@ -1,0 +1,13 @@
+/* CSS Code to make the main content take up all space not taken by the header or footer */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
