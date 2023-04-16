@@ -1,5 +1,9 @@
 .card {
-	width: 15rem;
+	width: 18rem;
+}
+
+.card-body > button {
+	width: 80%;
 }
 
 #card-container {
