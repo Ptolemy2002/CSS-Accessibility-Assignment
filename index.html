@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>CSS Accessibility Assignment</title>
+	<title>Web Accessibility</title>
 
 	<!-- Include Bootstrap -->
 		<!-- Styles -->
@@ -50,11 +50,46 @@
 </head>
 <body>
 	<header class="sticky-top bg-light p-3">
-		<h1>CSS Accessibility Assignment</h1>
+		<h1>Web Accessibility</h1>
 	</header>
 
 	<main class="container">
-		
+		<section role="region" aria-label="The 4 Tenets of Web Accessibility">
+			<h2>The 4 Tenets of Web Accessibility</h2>
+			<ul>
+				<li role="listitem">Perceivable</li>
+				<li role="listitem">Operable</li>
+				<li role="listitem">Understandable</li>
+				<li role="listitem">Robust</li>
+			</ul>
+		</section>
+
+		<section role="region" aria-label="Overview of WCAG-EM">
+			<h2>Overview of WCAG-EM</h2>
+			<p>
+				The Web Content Accessibility Guidelines Evaluation Methodology (WCAG-EM) is a tool for evaluating
+				the accessibility of web content. It provides a framework for evaluating the conformance of web content
+				to the WCAG guidelines.
+			</p>
+		</section>
+
+		<section role="region" aria-label="The Importance of Using Semantic Tags">
+			<h2>The Importance of Using Semantic Tags</h2>
+			<p>
+				Semantic tags are HTML tags that provide meaning to the content they enclose.
+				Using semantic tags can improve the accessibility of a web page by making it easier for screen
+				readers and other assistive technologies to interpret the content.
+			</p>
+		</section>
+
+		<section role="region" aria-label="Using ARIA in Web Pages">
+			<h2>Using ARIA in Web Pages</h2>
+			<p>
+				Accessible Rich Internet Applications (ARIA) is a set of attributes that can be added to HTML tags to
+				improve the accessibility of dynamic content. ARIA can be used to provide additional information to assistive
+				technologies, such as screen readers.
+			</p>
+		</section>
 	</main>
 
 	<footer class="sticky-bottom bg-light p-3">
